@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20130901-r5756">
+  <project autorefresh="false" root="" work="">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="PuzzleChecker.java" package="" timestamp="09-Mar-2014 10:42:26">
+        <select from="1112" to="1112"/>
+        <scroll column="656" row="0"/>
+      </file>
+      <file name="Board.java" package="" timestamp="09-Mar-2014 22:32:29">
+        <select from="1112" to="1112"/>
+        <scroll column="656" row="0"/>
+      </file>
+      <file name="Solver.java" package="" timestamp="09-Mar-2014 22:32:41">
+        <select from="1112" to="1112"/>
+        <scroll column="656" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath>
+      <file absolute="false" name="../../algs4.jar"/>
+      <file absolute="false" name="../../stdlib.jar"/>
+    </classpath>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>

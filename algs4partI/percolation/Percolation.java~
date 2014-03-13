@@ -1,0 +1,55 @@
+public class Percolation {
+
+ private int N; // size of sites: N*N
+ private boolean[] sites; // store the status of site which is open or block.
+ private WeightedQuickUnionUF uf;
+ private WeightedQuickUnionUF ufBackwash;
+ private int[][] vector = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+
+ public Percolation(int N) // create N-by-N grid, with all sites blocked
+ {
+  this.N = N;
+  this.sites = new boolean[(N + 1) * (N + 1)];
+  this.uf = new WeightedQuickUnionUF((N + 1) * (N + 1));
+  this.ufBackwash = new WeightedQuickUnionUF((N + 1) * N + 1);
+
+  for (int i = 1; i <= N; i++) {
+   uf.union(1, i);
+   ufBackwash.union(1, i);
+   sites[i] = true;
+   uf.union(N * (N + 1) + 1, N * (N + 1) + i);
+   sites[(N + 1) * N + i] = true;
+  }
+ }
+
+ public void open(int i, int j) // open site (row i, column j) if it is not
+         // already
+ {
+  if (sites[i * N + j])
+   return;
+  sites[i * N + j] = true;
+  for (int v = 0; v < vector.length; v++) {
+   int index = (i + vector[v][0]) * N + j + vector[v][1];
+   if (sites[index]) {
+    uf.union(i * N + j, index);
+    if (i != N && v != 1) // (i+1)*N+j
+     ufBackwash.union(i * N + j, index);
+   }
+  }
+ }
+
+ public boolean isOpen(int i, int j) // is site (row i, column j) open?
+ {
+  return sites[i * N + j];
+ }
+
+ public boolean isFull(int i, int j) // is site (row i, column j) full?
+ {
+  return ufBackwash.connected(0, i * N + j) && sites[i * N + j];
+ }
+
+ public boolean percolates() // does the system percolate?
+ {
+  return uf.connected(1, (N + 1) * N + 1);
+ }
+}

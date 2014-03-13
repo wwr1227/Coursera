@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20130901-r5756">
+  <project autorefresh="false" main="" root="" work="">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="RandomizedQueue.java" package="" timestamp="23-Feb-2014 15:29:20">
+        <select from="955" to="955"/>
+        <scroll column="379" row="0"/>
+      </file>
+      <file name="Deque.java" package="" timestamp="23-Feb-2014 15:23:56">
+        <select from="955" to="955"/>
+        <scroll column="379" row="0"/>
+      </file>
+      <file name="Subset.java" package="" timestamp="23-Feb-2014 15:29:46">
+        <select from="955" to="955"/>
+        <scroll column="379" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath>
+      <file absolute="false" name="../../stdlib.jar"/>
+    </classpath>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>
